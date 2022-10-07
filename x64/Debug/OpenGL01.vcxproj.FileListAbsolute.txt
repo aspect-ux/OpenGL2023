@@ -1,1 +1,2 @@
 D:\programming\VSRepository\OpenGL2022\OpenGL01\x64\Debug\OpenGL01.exe
+D:\programming\VSRepository\OpenGL2022\x64\Debug\OpenGL01.exe
