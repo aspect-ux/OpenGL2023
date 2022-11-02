@@ -19,11 +19,11 @@
     <Filter Include="源文件\res\Shader">
       <UniqueIdentifier>{92aa778f-061b-41a1-8727-6985c41a407b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\res\Texture">
+      <UniqueIdentifier>{86a854cb-7644-41c5-a3a1-8528eb60c8c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="glad.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -36,10 +36,51 @@
     <ClCompile Include="Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="main\transform.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Basic.shader">
       <Filter>源文件\res\Shader</Filter>
     </None>
+    <None Include=".gitignore" />
+    <None Include="README.md" />
+    <None Include="fragment.shader">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="vertex.shader">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="Shaders\transformVertex.shader" />
+    <None Include="Shaders\transformFragment.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="test.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\container.jpg">
+      <Filter>源文件</Filter>
+    </Image>
+    <Image Include="Texture\wall.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\container.jpg">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\awesomeface.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="Texture\awesomeface.png">
+      <Filter>资源文件</Filter>
+    </Image>
   </ItemGroup>
 </Project>

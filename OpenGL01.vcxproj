@@ -106,8 +106,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>D:\trial\github\OpenGL2022\;D:\计算机图形学\OpenGL\库文件\stb-master\;D:\计算机图形学\OpenGL\库文件\glm库\glm-0.9.5.3\glm\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,12 +135,30 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="main\transform.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="Basic.shader" />
+    <None Include="fragment.shader" />
+    <None Include="README.md" />
+    <None Include="Shaders\transformFragment.shader" />
+    <None Include="Shaders\transformVertex.shader" />
+    <None Include="vertex.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="test.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\awesomeface.png" />
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\container.jpg" />
+    <Image Include="Texture\awesomeface.png" />
+    <Image Include="Texture\container.jpg" />
+    <Image Include="Texture\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
