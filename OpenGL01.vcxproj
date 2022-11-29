@@ -108,12 +108,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\trial\github\OpenGL2022\;D:\计算机图形学\OpenGL\库文件\stb-master\;D:\计算机图形学\OpenGL\库文件\glm库\glm-0.9.5.3\glm\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\trial\github\OpenGL2022\;D:\计算机图形学\OpenGL\库文件\stb-master\;D:\计算机图形学\OpenGL\库文件\glm库\glm-0.9.5.3\glm\;D:\trial\GraphicSDK\SOIL\SOIL\include\SOIL\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;glew32.lib;D:\trial\GraphicSDK\SOIL\SOIL\lib\x64\SOIL-vc140.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -135,29 +135,69 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="glad.c" />
-    <ClCompile Include="main\transform.cpp" />
+    <ClCompile Include="main\Breakout\Source\ball object.cpp" />
+    <ClCompile Include="main\Breakout\Source\game.cpp" />
+    <ClCompile Include="main\Breakout\Source\game_level.cpp" />
+    <ClCompile Include="main\Breakout\Source\game_object.cpp" />
+    <ClCompile Include="main\Breakout\Source\particle_generator.cpp" />
+    <ClCompile Include="main\Breakout\Source\post_processor.cpp" />
+    <ClCompile Include="main\Breakout\Source\resource_manager.cpp" />
+    <ClCompile Include="main\Breakout\Source\shader.cpp" />
+    <ClCompile Include="main\Breakout\Source\sprite_renderer.cpp" />
+    <ClCompile Include="main\Breakout\Source\texture.cpp" />
+    <ClCompile Include="main\Light\color.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
-    <None Include="Basic.shader" />
-    <None Include="fragment.shader" />
+    <None Include="levels\four.lvl" />
+    <None Include="levels\one.lvl" />
+    <None Include="levels\three.lvl" />
+    <None Include="levels\two.lvl" />
+    <None Include="main\Breakout\Shaders\fragment.shader" />
+    <None Include="main\Breakout\Shaders\particleFragment.shader" />
+    <None Include="main\Breakout\Shaders\particleVertex.shader" />
+    <None Include="main\Breakout\Shaders\shakeFragment.shader" />
+    <None Include="main\Breakout\Shaders\shakeVertex.shader" />
+    <None Include="main\Breakout\Shaders\vertex.shader" />
+    <None Include="Shaders\Basic.shader" />
+    <None Include="Shaders\colorFragment.shader" />
+    <None Include="Shaders\colorVertex.shader" />
+    <None Include="Shaders\fragment.shader" />
     <None Include="README.md" />
+    <None Include="Shaders\lightCubeFragment.shader" />
+    <None Include="Shaders\lightCubeVertex.shader" />
     <None Include="Shaders\transformFragment.shader" />
     <None Include="Shaders\transformVertex.shader" />
-    <None Include="vertex.shader" />
+    <None Include="Shaders\vertex.shader" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="shader.h" />
-    <ClInclude Include="test.h" />
+    <ClInclude Include="Headers\camera.h" />
+    <ClInclude Include="main\Breakout\Headers\ball_object.h" />
+    <ClInclude Include="main\Breakout\Headers\game.h" />
+    <ClInclude Include="main\Breakout\Headers\game_level.h" />
+    <ClInclude Include="main\Breakout\Headers\game_object.h" />
+    <ClInclude Include="main\Breakout\Headers\particle_generator.h" />
+    <ClInclude Include="main\Breakout\Headers\post_processor.h" />
+    <ClInclude Include="main\Breakout\Headers\resource_manager.h" />
+    <ClInclude Include="main\Breakout\Headers\shader.h" />
+    <ClInclude Include="main\Breakout\Headers\sprite_renderer.h" />
+    <ClInclude Include="main\Breakout\Headers\texture.h" />
+    <ClInclude Include="Headers\resource.h" />
+    <ClInclude Include="Headers\shader.h" />
+    <ClInclude Include="Headers\test.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\awesomeface.png" />
-    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\container.jpg" />
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\block.png" />
+    <Image Include="..\..\..\计算机图形学\OpenGL\Texture\Texture纹理\block_solid.png" />
     <Image Include="Texture\awesomeface.png" />
+    <Image Include="Texture\background.jpg" />
+    <Image Include="Texture\block.png" />
+    <Image Include="Texture\block_solid.png" />
     <Image Include="Texture\container.jpg" />
+    <Image Include="Texture\paddle.png" />
+    <Image Include="Texture\particle.png" />
     <Image Include="Texture\wall.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
