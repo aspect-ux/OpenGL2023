@@ -1,10 +1,11 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include <Headers/shader.h>
+#include <Headers/light_shader_m.h>
 #include <Headers/camera.h>
 
 #include <iostream>
@@ -76,7 +77,7 @@ int main()
     // build and compile our shader zprogram
     // ------------------------------------
     Shader lightingShader("Shaders/colorVertex.shader", "Shaders/colorFragment.shader");
-    Shader lightCubeShader("Shaders/lightCubeVertex.shader", "Shaders/lightCubeFragment.shader");
+    Shader lightCubeShader("Shaders/lightCubeVertex.shader", "Shaders/lightCubeVertex.shader");
 
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------

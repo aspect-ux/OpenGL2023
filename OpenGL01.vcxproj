@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\trial\GraphicSDK\OpenGL\OpenGL\include\;$(IncludePath)</IncludePath>
+    <IncludePath>D:\trial\GraphicSDK\OpenGL\OpenGL\include\;D:\1游戏开发\计算机图形学\OpenGL\库文件\glm库\glm-0.9.5.3\glm;$(IncludePath)</IncludePath>
     <LibraryPath>D:\trial\GraphicSDK\OpenGL\OpenGL\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -145,7 +145,7 @@
     <ClCompile Include="main\Breakout\Source\shader.cpp" />
     <ClCompile Include="main\Breakout\Source\sprite_renderer.cpp" />
     <ClCompile Include="main\Breakout\Source\texture.cpp" />
-    <ClCompile Include="main\Light\color.cpp" />
+    <ClCompile Include="main\Light\basicModel.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="triangle.cpp" />
   </ItemGroup>
@@ -168,12 +168,15 @@
     <None Include="README.md" />
     <None Include="Shaders\lightCubeFragment.shader" />
     <None Include="Shaders\lightCubeVertex.shader" />
+    <None Include="Shaders\specularFragment.shader" />
+    <None Include="Shaders\specularVertex.shader" />
     <None Include="Shaders\transformFragment.shader" />
     <None Include="Shaders\transformVertex.shader" />
     <None Include="Shaders\vertex.shader" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\camera.h" />
+    <ClInclude Include="Headers\light_shader_m.h" />
     <ClInclude Include="main\Breakout\Headers\ball_object.h" />
     <ClInclude Include="main\Breakout\Headers\game.h" />
     <ClInclude Include="main\Breakout\Headers\game_level.h" />

@@ -66,7 +66,7 @@
     <ClCompile Include="main\Breakout\Source\post_processor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="main\Light\color.cpp">
+    <ClCompile Include="main\Light\basicModel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,6 +98,8 @@
     <None Include="Shaders\colorFragment.shader" />
     <None Include="Shaders\lightCubeVertex.shader" />
     <None Include="Shaders\lightCubeFragment.shader" />
+    <None Include="Shaders\specularVertex.shader" />
+    <None Include="Shaders\specularFragment.shader" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\shader.h">
@@ -140,6 +142,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Headers\camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\light_shader_m.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
