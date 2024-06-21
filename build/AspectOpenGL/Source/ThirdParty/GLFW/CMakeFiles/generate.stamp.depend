@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/CMakeDependentOption.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/CheckIncludeFile.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/CheckLibraryExists.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/FindPackageMessage.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/FindThreads.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/GNUInstallDirs.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake
+D:/MySoftware/SpecialSoftware/CMAKE/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake
+D:/trial/github/OpenGL2023/AspectOpenGL/Source/ThirdParty/GLFW/CMake/glfw3Config.cmake.in
+D:/trial/github/OpenGL2023/AspectOpenGL/Source/ThirdParty/GLFW/CMakeLists.txt

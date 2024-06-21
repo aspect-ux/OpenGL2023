@@ -1,0 +1,12 @@
+RUNTIME_ADD_SOURCE(
+ball_object.h
+game.h
+game_level.h
+game_object.h
+particle_generator.h
+post_processor.h
+resource_manager.h
+shader.h
+sprite_renderer.h
+texture.h
+)
