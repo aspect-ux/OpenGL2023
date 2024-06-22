@@ -3,9 +3,9 @@ set(ThirdPartyFolder "ThirdParty")
 include(${CMAKE_SOURCE_DIR}/CMake/Tools.cmake)
 
 if(NOT TARGET Glad)
-    #include(Glad.cmake)
-    #set_target_properties(Glad PROPERTIES FOLDER ${ThirdPartyFolder}/Glad)
-    #NoWarning(Glad)
+    include(Glad.cmake)
+    set_target_properties(Glad PROPERTIES FOLDER ${ThirdPartyFolder}/Glad)
+    NoWarning(Glad)
 endif()
 
 # GLFW with the same name of project GLFW, so named "glfw"
@@ -28,6 +28,7 @@ if(NOT TARGET glm)
     NoWarningInterface(glm)
 endif()
 
+#[[
 if(NOT TARGET glew)
     option(ONLY_LIBS "" ON)
     set(glew-cmake_BUILD_SHARED,FALSE)
@@ -35,15 +36,14 @@ if(NOT TARGET glew)
     #set_target_properties(glew PROPERTIES FOLDER ${ThirdPartyFolder}/glew)
     #NoWarningInterface(glew)
 endif()
-
-
+]]
 if(NOT TARGET stb)
-    #include(stb.cmake)
-    #set_target_properties(stb PROPERTIES FOLDER ${ThirdPartyFolder}/stb)
-    #NoWarning(stb)
+    include(stb.cmake)
+    set_target_properties(stb PROPERTIES FOLDER ${ThirdPartyFolder}/stb)
+    NoWarning(stb)
 endif()
 
-#[[
+
 if(NOT TARGET assimp)
     OPTION( BUILD_SHARED_LIBS
       "Build package with shared libraries."
@@ -122,12 +122,17 @@ if(NOT TARGET assimp)
     set_target_properties(assimp PROPERTIES FOLDER ${ThirdPartyFolder}/assimp)
     NoWarning(assimp)
 endif()
-]]
+
+# customed headers
 
 if(NOT TARGET headers)
     add_library(headers INTERFACE)
     target_include_directories(headers INTERFACE "${ThirdPartyDir}")
+    target_include_directories(headers INTERFACE "${ThirdPartyDir}/learnopengl")
+    target_include_directories(headers INTERFACE "${ThirdPartyDir}/assimp/include")
+    target_include_directories(headers INTERFACE "${ThirdPartyDir}/irrKlang/include")
+    target_include_directories(headers INTERFACE "${ThirdPartyDir}/freetype/include")
+    
     #target_include_directories(headers INTERFACE "${ThirdPartyDir}/entt/include")
-    #target_include_directories(headers INTERFACE "${ThirdPartyDir}/assimp/include")
     NoWarningInterface(headers)
 endif()
