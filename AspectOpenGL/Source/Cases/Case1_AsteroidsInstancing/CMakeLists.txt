@@ -23,16 +23,7 @@ if(WIN32)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
 endif(WIN32)
 
-# copy shader files to build directory
-file(GLOB SHADERS
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.vs"
-    # "src/${chapter}/${demo}/*.frag"
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.fs"
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.tcs"
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.tes"
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.gs"
-    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.cs"
- )
+
 # 添加现成动态库dll
 # copy dlls
 
@@ -53,6 +44,23 @@ PUBLIC ${LIBS}
 if(MSVC)  
     target_link_options(Case1_AsteroidsInstancing PRIVATE "/SUBSYSTEM:CONSOLE")  
 endif()  
+
+# copy shader files to build directory
+file(GLOB SHADERS
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.vs"
+    # "src/${chapter}/${demo}/*.frag"
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.fs"
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.tcs"
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.tes"
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.gs"
+    "${SourceDir}/Cases/Case1_AsteroidsInstancing/*.cs"
+ )
+ foreach(SHADER ${SHADERS})
+ if(WIN32)
+    # configure_file(${SHADER} "test")
+    add_custom_command(TARGET Case1_AsteroidsInstancing PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy ${SHADER} $<TARGET_FILE_DIR:Case1_AsteroidsInstancing>)
+ endif(WIN32)
+ endforeach(SHADER)
 
 #set_target_properties用于设置目标属性，也就是可执行文件或库的特性，例如链接器，编译器或安装路径等
 set_target_properties(Case1_AsteroidsInstancing PROPERTIES OUTPUT_NAME "Case1_AsteroidsInstancing")

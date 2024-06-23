@@ -26,7 +26,6 @@ endif(WIN32)
 # 添加现成动态库dll
 # copy dlls
 
-
 # 添加可执行文件并根据需求链接库
 add_executable(Breakout WIN32 ${DIR_SRCS} ${HEADER_FILES})
 target_link_libraries(Breakout
